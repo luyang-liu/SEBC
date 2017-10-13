@@ -3,11 +3,11 @@
 * cloud provider:AWS
 * IP address and NDS name:
    Public :
-   IP:172.31.40.9 DNS (IPv4)ec2-54-202-132-53.us-west-2.compute.amazonaws.com
    IP:172.31.41.203 DNS (IPv4)ec2-34-210-71-32.us-west-2.compute.amazonaws.com  
    IP:172.31.40.116 DNS (IPv4)ec2-54-202-139-242.us-west-2.compute.amazonaws.com
    IP:172.31.42.219 DNS (IPv4)ec2-34-210-85-226.us-west-2.compute.amazonaws.com
    IP:172.31.40.143 DNS (IPv4)ec2-34-214-106-121.us-west-2.compute.amazonaws.com
+   IP:172.31.40.9 DNS (IPv4)ec2-54-202-132-53.us-west-2.compute.amazonaws.com
 
 * Linux release 
    /* cat /proc/version  */
@@ -16,7 +16,7 @@
  
  * system capacity for my fist node
    /* df -h*/
-  $[root@ip-172-31-40-9 ~]# df -h
+  $df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvde        30G  669M   28G   3% /
 tmpfs           3.7G     0  3.7G   0% /dev/shm
@@ -24,7 +24,7 @@ tmpfs           3.7G     0  3.7G   0% /dev/shm
 
                                                    
   * yum repolist
-[root@ip-172-31-40-9 ~]# yum repolist enabled
+yum repolist enabled
 Loaded plugins: fastestmirror, presto
 base                                                                                                                                                                    | 3.7 kB     00:00     
 base/primary_db                                                                                                                                                         | 4.7 MB     00:01     
