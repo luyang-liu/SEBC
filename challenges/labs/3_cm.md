@@ -10,6 +10,9 @@ drwxr-xr-x   - hdfs   supergroup          0 2017-10-13 02:56 /user/jimenez
 drwxrwxr-x   - oozie  oozie               0 2017-10-13 02:53 /user/oozie
 
 ```
+@mfernest: Note the test user accounts have not been assigned to their owners. This means `beltran` and `jimenez` still cannot write to the HDFS file system.
+```
+```
 *
   The command and output from the CM API call  ../api/v5/hosts  
 ```
@@ -77,7 +80,8 @@ http://ec2-54-202-139-242.us-west-2.compute.amazonaws.com:7180/api/v5/hosts
 *  The command and output from the CM API call  ../api/v11/clusters/<githubName>/services  
 
 ```
-http://ec2-54-202-139-242.us-west-2.compute.amazonaws.com:7180/api/v11/clusters/luyang-liu/services 
+http://ec2-54-202-139-242.us-west-2.compute.amazonaws.com:7180/api/v11/clusters/luyang-liu/services
+ 
 {
   "items" : [ {
     "name" : "hive",
