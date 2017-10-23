@@ -39,4 +39,4 @@ updates                                                                         
 repolist: 7,474
 
 ```
-
+@mfernest: Test user/group assignments are missing.
