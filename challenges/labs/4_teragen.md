@@ -1,6 +1,9 @@
 * The full  teragen  command and output
 ```
 time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop*-examples.jar teragen -Dmapred.map.tasks=8 -Ddfs.block.size=67108864 -Dyarn.nodemanager.resource.memory-mb=536870912 65536000  /user/jimenez/tgen
+```
+@mfernest: the property `Dyarn.nodemanager.resource.memory-mb` does not set a container size for a task. It could set the resource limit on a NodeManager, but in this case the value is too large and would be ignored.
+```
 17/10/13 03:46:09 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-40-116.us-west-2.compute.internal/172.31.40.116:8032
 17/10/13 03:46:10 INFO terasort.TeraSort: Generating 65536000 using 8
 17/10/13 03:46:11 INFO mapreduce.JobSubmitter: number of splits:8
