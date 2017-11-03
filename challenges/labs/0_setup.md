@@ -3,11 +3,11 @@
 * cloud provider:AWS
 * IP address and NDS name:
    Public :
-   IP:172.31.40.179 DNS (IPv4)ec2-54-187-226-190.us-west-2.compute.amazonaws.com  
-   IP:172.31.42.112 DNS (IPv4)ec2-54-186-60-199.us-west-2.compute.amazonaws.com
-   IP:172.31.33.201 DNS (IPv4)ec2-54-201-252-26.us-west-2.compute.amazonaws.com
-   IP:172.31.40.19 DNS (IPv4)ec2-54-202-34-49.us-west-2.compute.amazonaws.com  
-   IP:172.31.44.80 DNS (IPv4)ec2-54-245-6-153.us-west-2.compute.amazonaws.com
+   IP:172.31.36.244 DNS (IPv4)ec2-34-214-186-29.us-west-2.compute.amazonaws.com  
+   IP:172.31.42.244 DNS (IPv4)ec2-54-213-200-112.us-west-2.compute.amazonaws.com
+   IP:172.31.40.47 DNS (IPv4)ec2-54-186-0-140.us-west-2.compute.amazonaws.com
+   IP:172.31.35.63 DNS (IPv4)ec2-54-202-185-4.us-west-2.compute.amazonaws.com 
+   IP:172.31.43.219 DNS (IPv4)ec2-54-202-17-229.us-west-2.compute.amazonaws.com
 
 * Linux release 
    /* cat /proc/version  */
@@ -16,20 +16,19 @@
  
  * system capacity for my fist node
    /* df -h*/
-  $df -h
+[root@ip-172-31-36-244 ~]# df -h
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/xvde        30G  656M   28G   3% /
+/dev/xvde        30G  658M   28G   3% /
 tmpfs           7.4G     0  7.4G   0% /dev/shm
 
                                                    
   * yum repolist
+[root@ip-172-31-36-244 ~]# yum repolist enabled
 Loaded plugins: fastestmirror, presto
-base                                                                                                                                                                    | 3.7 kB     00:00     
-base/primary_db                                                                                                                                                         | 4.7 MB     00:00     
-extras                                                                                                                                                                  | 3.4 kB     00:00     
-extras/primary_db                                                                                                                                                       |  29 kB     00:00     
-updates                                                                                                                                                                 | 3.4 kB     00:00     
-updates/primary_db                                                                                                                                                      | 4.7 MB     00:00     
+Determining fastest mirrors
+ * base: mirrors.unifiedlayer.com
+ * extras: linux.mirrors.es.net
+ * updates: linux.mirrors.es.net
 repo id                                                                                repo name                                                                                         status
 base                                                                                   CentOS-6 - Base                                                                                   6,706
 extras                                                                                 CentOS-6 - Extras                                                                                    46
@@ -38,19 +37,15 @@ repolist: 7,508
 
 
 * List the users&group
-`cat /etc/passwd|grep -e jimenez -e beltran`
+`cat /etc/passwd|grep -e reilly -e frankola `
 
-[root@ip-172-31-40-179 ~]# cat /etc/passwd|grep -e jimenez -e beltran
-jimenez:x:2800:500:jimenez:/home/jimenez:/bin/bash
-beltran:x:2900:501:beltran:/home/beltran:/bin/bash
+[root@ip-172-31-36-244 ~]# cat /etc/passwd|grep -e reilly -e frankola
+reilly:x:2800:500:reilly:/home/reilly:/bin/bash
+frankola:x:2900:501:frankola:/home/frankola:/bin/bash
 
-
-
-`cat /etc/group|grep -e rangers -e astros`
-[root@ip-172-31-40-179 ~]# cat /etc/group|grep -e rangers -e astros
-rangers:x:500:jimenez
-astros:x:501:beltran
-
+`cat /etc/group|grep -e sanfrancisco -e paloalto `
+[root@ip-172-31-36-244 ~]# cat /etc/group|grep -e sanfrancisco -e paloalto
+sanfrancisco:x:500:reilly
+paloalto:x:501:frankola
 
 ```
-@mfernest: Test user/group assignments are missing.
